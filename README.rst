@@ -16,6 +16,12 @@ LDAP3
 
 ldap3 is a strictly RFC 4510 conforming **LDAP V3 pure Python client** library. The same codebase runs in Python 2, Python 3, PyPy and PyPy3.
 
+> [!WARNING]  
+> This is a bleeding edge version.
+> This version includes:
+> * [#1139](https://github.com/cannatag/ldap3/pull/1139): fix requirements.txt
+> * [#1150](https://github.com/cannatag/ldap3/pull/1150): adding microsoft fastbind extended operation
+> * [#1151](https://github.com/cannatag/ldap3/pull/1151): fix CBT computing when cert digest algo is not MD5, SHA1 or SHA256
 
 A more pythonic LDAP
 --------------------
