@@ -22,6 +22,29 @@ This is a bleeding edge version. This version includes:
     * https://github.com/cannatag/ldap3/pull/1139: fix requirements.txt
     * https://github.com/cannatag/ldap3/pull/1150: adding microsoft fastbind extended operation
     * https://github.com/cannatag/ldap3/pull/1151: fix CBT computing when cert digest algo is not MD5, SHA1 or SHA256
+    * https://github.com/cannatag/ldap3/pull/1153: [DOC] Fix grammar and sentence structure
+    * https://github.com/cannatag/ldap3/pull/1155: [DOC] Fix `Unexpected indentation` error within the doc
+
+A more pythonic LDAP
+--------------------
+
+LDAP operations look clumsy and hard-to-use because they reflect the old-age idea that time-consuming operations should be performed client-side
+to not hog the server with heavy elaborations. To alleviate this ldap3 includes a fully functional **Abstraction Layer** that lets you
+interact with the LDAP server in a modern and *pythonic* way. With the Abstraction Layer you don't need to directly issue any LDAP operation at all.
+
+
+Thread safe strategies
+----------------------
+
+In multithreaded programs you must use one of **SAFE_SYNC** (synchronous connection strategy), **SAFE_RESTARTABLE** (restartable syncronous connection strategy) or **ASYNC** (asynchronous connection strategy).
+   Each LDAP operation with SAFE_SYNC or SAFE_RESTARTABLE strategies returns a tuple of four elements: status, result, response and request.
+
+   * status: states if the operation was successful
+
+   * result: the LDAP result of the operation
+
+   * response: the response of a LDAP Search Operation
+
 
 A more pythonic LDAP
 --------------------
