@@ -1,5 +1,8 @@
 pyasn1>=0.4.6
 pycryptodomex
 winkerberos; platform_system=='Windows'
-gssapi; platform_system!='Windows'
+# this should be optional, and should be forceing all user to install
+# package doesn't support manylinux wheels, which make it hard to get installed
+# https://github.com/pythongssapi/python-gssapi/issues/343
+# gssapi; platform_system!='Windows'
 cryptography
