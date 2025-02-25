@@ -26,6 +26,7 @@ This is a bleeding edge version. This version includes:
     * https://github.com/cannatag/ldap3/pull/1155: [DOC] Fix `Unexpected indentation` error within the doc
     * https://github.com/cannatag/ldap3/pull/1156: Correctly handle GSSAPI SASL negotiated max buffer size as per RFC4752
     * https://github.com/cannatag/ldap3/pull/1158: Fix up LDIF_LINE_LENGTH
+    * https://github.com/cannatag/ldap3/pull/1171: Fix parsing of objectGUIDs containing the byte 5C
 
 A more pythonic LDAP
 --------------------
