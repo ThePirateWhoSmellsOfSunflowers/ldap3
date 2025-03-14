@@ -1,5 +1,3 @@
 pyasn1>=0.4.6
 pycryptodomex
-winkerberos; platform_system=='Windows'
-gssapi; platform_system!='Windows'
 cryptography

@@ -48,7 +48,7 @@ if posix_gssapi_unavailable:
         import winkerberos
         windows_gssapi_unavailable = False
     except ImportError:
-        raise LDAPPackageUnavailableError('package gssapi (or winkerberos) missing')
+        pass
 
 from .sasl import send_sasl_negotiation, abort_sasl_negotiation
 

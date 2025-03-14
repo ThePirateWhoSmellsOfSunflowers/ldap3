@@ -28,6 +28,8 @@ This is a bleeding edge version. This version includes:
     * https://github.com/cannatag/ldap3/pull/1158: Fix up LDIF_LINE_LENGTH
     * https://github.com/cannatag/ldap3/pull/1171: Fix parsing of objectGUIDs containing the byte 5C
 
+This version no longer requires the installation of gssapi/winkerberos dependencies by default, if you want them, use `pip install ldap3-bleeding-edge[kerberos]` or `pip install ".[kerberos]"`.
+
 A more pythonic LDAP
 --------------------
 

@@ -82,9 +82,15 @@ class Clean(clean):
 setup_kwargs['cmdclass'] = {'clean': Clean}
 
 
-setup(name=package_name,
+setup(name="ldap3-bleeding_edge",
       version=version,
       install_requires=[i.strip() for i in open('requirements.txt').readlines()],
+      extras_require={
+          "kerberos": [
+              "winkerberos; platform_system=='Windows'",
+              "gssapi; platform_system!='Windows'"
+              ],
+          },
       license=license,
       author=author,
       author_email=email,

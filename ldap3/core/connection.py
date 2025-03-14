@@ -1373,6 +1373,9 @@ class Connection(object):
                     elif self.sasl_mechanism == DIGEST_MD5:
                         result = sasl_digest_md5(self, controls)
                     elif self.sasl_mechanism == GSSAPI:
+                        from ..protocol.sasl.kerberos import posix_gssapi_unavailable, windows_gssapi_unavailable
+                        if posix_gssapi_unavailable and windows_gssapi_unavailable:
+                            raise LDAPPackageUnavailableError('package gssapi or winkerberos missing')
                         from ..protocol.sasl.kerberos import sasl_gssapi  # needs the gssapi package
                         result = sasl_gssapi(self, controls)
                     elif self.sasl_mechanism == 'PLAIN':
